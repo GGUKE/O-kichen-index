@@ -1,10 +1,10 @@
-window.addEventListener("load", function(){
+window.addEventListener("load", () => {
 	let mobile=document.querySelector("#mobile");
 	let tab=document.querySelector("#header .tab");
 	let dim=document.querySelector(".dim");
 	let closeBtn=document.querySelector(".icon .close");
 
-	tab.addEventListener("click", function(e){
+	tab.addEventListener("click", (e) => {
 		e.preventDefault();
 
 		document.body.classList.add("fixed");
@@ -12,13 +12,13 @@ window.addEventListener("load", function(){
 		dim.classList.add("active");
 	});
 
-	dim.addEventListener("click", function(){
+	dim.addEventListener("click", () => {
 		document.body.classList.remove("fixed");
 		mobile.classList.remove("active");
 		dim.classList.remove("active");
 	});
 
-	closeBtn.addEventListener("click", function(e){
+	closeBtn.addEventListener("click", (e) => {
 		e.preventDefault();
 
 		document.body.classList.remove("fixed");
